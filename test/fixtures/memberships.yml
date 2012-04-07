@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  politico: 
+  orgao: 
+  cargo: MyString
+
+two:
+  politico: 
+  orgao: 
+  cargo: MyString

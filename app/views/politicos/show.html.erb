@@ -1,0 +1,9 @@
+<h1><%= @politico.nome_parlamentar.titleize %></h1>
+
+<div class="thumbnail" style="width: 114px">
+	<%= image_tag @politico.foto %>
+</div>
+
+<div class="form-actions">
+  <%= link_to 'Back', politicos_path, :class => 'btn'  %>
+</div>

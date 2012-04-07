@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @partido.nome %>
+</p>
+
+<p>
+  <b>Sigla:</b>
+  <%= @partido.sigla %>
+</p>
+
+<p>
+  <b>Numero eleitora:</b>
+  <%= @partido.numero_eleitora %>
+</p>
+
+<p>
+  <b>Deferimento:</b>
+  <%= @partido.deferimento %>
+</p>
+
+<p>
+  <b>Presidente:</b>
+  <%= @partido.presidente %>
+</p>
+
+
+<%= link_to 'Edit', edit_partido_path(@partido) %> |
+<%= link_to 'Back', partidos_path %>

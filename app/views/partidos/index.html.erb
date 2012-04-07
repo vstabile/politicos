@@ -1,0 +1,31 @@
+<h1>Listing partidos</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Sigla</th>
+    <th>Numero eleitora</th>
+    <th>Deferimento</th>
+    <th>Presidente</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @partidos.each do |partido| %>
+  <tr>
+    <td><%= partido.nome %></td>
+    <td><%= partido.sigla %></td>
+    <td><%= partido.numero_eleitora %></td>
+    <td><%= partido.deferimento %></td>
+    <td><%= partido.presidente %></td>
+    <td><%= link_to 'Show', partido %></td>
+    <td><%= link_to 'Edit', edit_partido_path(partido) %></td>
+    <td><%= link_to 'Destroy', partido, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Partido', new_partido_path %>

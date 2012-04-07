@@ -1,0 +1,29 @@
+<table class="table">
+  <thead>
+    <tr>
+			<th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @politicos.each do |politico| %>
+      <tr>
+				<td style="width: 90px;">
+					<div class="thumbnail" style="width: 90px">
+						<%= link_to image_tag(politico.foto, :style => "height: 120px"), politico_path(politico) %></td>
+					</div>
+        <td style="padding: 25px 15px;" class="politico-info">
+					<h2>
+						<%= politico.nome_parlamentar.titleize %>
+					</h2>
+					<div style="font-size: 14px;">
+						Deputado Federal pelo <%= politico.partido.sigla %>
+					</div>
+					<div style="margin-top: 10px; font-weight: bold; color: #99954F;">
+						<%= ESTADOS[politico.uf] %>
+					</div>
+				</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

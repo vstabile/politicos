@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nome: MyString
+  sigla: MyString
+  numero_eleitora: MyString
+  deferimento: MyString
+  presidente: MyString
+
+two:
+  nome: MyString
+  sigla: MyString
+  numero_eleitora: MyString
+  deferimento: MyString
+  presidente: MyString

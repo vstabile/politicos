@@ -1,0 +1,37 @@
+<%= form_for(@partido) do |f| %>
+  <% if @partido.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@partido.errors.count, "error") %> prohibited this partido from being saved:</h2>
+
+      <ul>
+      <% @partido.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :sigla %><br />
+    <%= f.text_field :sigla %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_eleitora %><br />
+    <%= f.text_field :numero_eleitora %>
+  </div>
+  <div class="field">
+    <%= f.label :deferimento %><br />
+    <%= f.text_field :deferimento %>
+  </div>
+  <div class="field">
+    <%= f.label :presidente %><br />
+    <%= f.text_field :presidente %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
