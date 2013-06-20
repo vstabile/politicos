@@ -2,8 +2,14 @@
 
 Plataforma que usa dados abertos e colaborativos para manter os cidadãos informados sobre as atividades políticas de seus representantes
 
+== Objetivo
+
+* Diretório de informações gerais
+* Permitir ao cidadão companhar atividades de interesse via newsletter e feed
+* Canal de comunicação com os representantes
+
 == Funcionalidades
 
-* Informações gerais
-* Acompanhar atividades de interesse via newsletter e feed
-* Canal de comunicação com os representantes
+Foi implementada a busca de informações sobre deputados disponibilizada pela Câmara e estes dados são armazenados no banco de dados local. São obtidas informações sobre os deputados, partidos, comissões e participação em comissões. Estes dados são populados pela task:
+
+  rake db:obterDeputados

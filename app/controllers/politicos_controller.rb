@@ -2,7 +2,7 @@ class PoliticosController < ApplicationController
   # GET /politicos
   # GET /politicos.json
   def index
-    @politicos = Politico.all
+    @politicos = Politico.page params[:page]
 
     respond_to do |format|
       format.html # index.html.erb

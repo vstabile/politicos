@@ -9,8 +9,10 @@ namespace :db do
 			ActiveRecord::Base.connection.reset_pk_sequence!(c.table_name)
     end
     
-		client = ::Savon::Client.new("http://www.camara.gov.br/sitcamaraws/deputados.asmx?wsdl")
-		response = client.request :obter_deputados
+		#client = ::Savon::Client.new("http://www.camara.gov.br/sitcamaraws/deputados.asmx?wsdl")
+		client = Savon.client(wsdl: "http://www.camara.gov.br/sitcamaraws/deputados.asmx?wsdl")
+		#response = client.request :obter_deputados
+		response = client.call(:obter_deputados)
 		response_hash = response.to_hash
 		deputados =  response_hash[:obter_deputados_response][:obter_deputados_result][:deputados][:deputado]
 		
